@@ -1,0 +1,32 @@
+Functional Specification for 2D and 3D Cell Migration
+
+Brizzia G. Munoz Robles
+
+October 28th, 2023
+
+BIOEN 537
+
+Background
+
+Cell migration in response to a chemoattractant signal is a highly regulated biological response. Migration assays are commonly used by researchers to study the effect of various biochemical and mechanical cues and for therapeutic development. Given the complexity of the extracellular matrix, biomaterials, specifically hydrogels, have become a popular platform for probing and directing cell fate. Hydrogels are three dimensional networks, made from either natural or synthetic polymers and can be patterned with various biochemical and mechanical cues. The DeForest Group specifically uses photochemistries to spatiotemporally regulate signals within these 3D networks. Typically, variables such as the spatiotemporal presentation of the chemoattractant (concentration), cell seeding, and length of time for the experiment are all variables that play a critical role in the outcome of experiments. However, optimizing all these conditions is difficult and time consuming. 
+
+This tool provides a more mathematical approach to cell migration assays, both in 2D (tissue culture plastic) and 3D. In the first component of this tool, a photokinetics calculator allows users to input raw data from in solution photoactivation experiments to calculate a kinetic rate constant for activation of the biochemical cue. This will allow to create a starting basis for calculating the length of time and intensity of light needed to produce a response in 3D as well as how patterned light exposure will affect experiments. For the 2D and 3D cell migration model, the user can input the spatial pattern of the chemoattractant, initial seeding densities of the cells encapsulated in the hydrogel, cell proliferation/cell death (which vary based on cell type), and length of time of the experiment. 
+
+User Profile
+
+This tool is specifically developed for the DeForest Group but can be used by any researcher with a beginner coding background and is intended to be implemented in a Colaboratory Python notebook. The user should be able to use pip install in python. The user will be able to input raw data in the form of an excel file and select “run” to obtain photokinetic data. Instructions on uploading the excel file and format will be included in the notebook. In terms of the 2D and 3D model, the user will only have to specify constants such as cell proliferation, cell death, and length of time and select “run.” Output data will include graphical models corresponding to cell densities over the course of time. 
+
+Use Cases
+
+The user can use this tool to obtain a photokinetic rate constant, and for 2D or 3D cell migration.
+Photokinetic rate data:
+•	Photokinetic data should be obtained in a format with the time of exposure (minutes), light dosage (in mW cm-2) , and raw output values. The user will need to indicate the number of replicates used in the experiment. 
+•	The output will be a graph of the data and a kinetic rate constant. The user can also input a rate constant and obtain output values. 
+
+2D cell migration model:
+•	In the 2D cell migration model the user can input cell proliferation, cell death, and length of time. 
+•	The output will be a graph containing information of the density of cells based on the x dimension. 
+
+3D cell migration model: 
+•	In the 3D cell migration model the user can input cell proliferation, cell death, and length of time, as well as the spatiotemporal pattern of the chemoattractant
+•	The output will be a graph containing information of the density of cells based on the x,y,z dimension and a video simulation over time. 
