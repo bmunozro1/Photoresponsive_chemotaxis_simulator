@@ -1,0 +1,38 @@
+Component specification
+Brizzia Munoz Robles
+
+Software components. 
+
+	theoretical_photokinetics()
+	Purpose: Calculates theoretical photouncaging values using the following first order kinetic equation for photouncaging:
+  Y=Y_o+(plateau-Y_o )(1-exp⁡(-k*x) )
+	Input: 
+	Array of x values separated by commas. 
+	Photokinetic constant, k 
+	Output:
+	Table of x and corresponding y values (normalized to 1)
+	Scatter plot of theoretical data
+
+	exp_association() 
+	Purpose: Calculates the photouncaging constant k using the first order equation from above using raw data inputted from user as an excel file. It uses scipy.optimize.curve_fit to calculate the k value.
+	Input:
+	Excel file uploaded into Colaboratory folder, titled example_2 formatted such that the first column is labelled time and has all the time values and the corresponding y values titles labelled value
+	Output: 
+	Table of x and y values
+	Kinetic constant 
+	Data normalized and plotted in a scatter plot
+
+	cell_migration()
+	Purpose: Simulates cell migration using a stochastic agent based model designed by Fadai et al. 2019. 
+	Input: V,rm,rp,rd,tf,C_start,C_end,rhox
+	Output: Matrix consisting of cell location using a heat map, where white equates to occupancy by a cell and black equates to an empty compartment
+	
+Use Case:
+  Use case: For calculating theoretical photokinetics, after the user has entered the desired x values and photokinetic constant, the user should select “run” on the cell and the values will be outputted. 
+	Use case: For calculating a kinetic constant from raw data, after uploading the excel file, the user should run the cell, k value will be calculated. There will be a check_excel() function to verify that the excel file is in the correct format. If it is not, then it will return an error to the user and description of proper excel file format.   
+	Use case: For modeling cell migration, the user will input the various parameter values from a slider tool using Colab Forms. The check_param() function will verify that all values are within a given range. 
+	
+Preliminary plan. 
+	Run check functions for inputs from users to verify inputs are correct format
+	Fix errors
+	 Update output from cell_migration() to make it more user friendly/understandable
