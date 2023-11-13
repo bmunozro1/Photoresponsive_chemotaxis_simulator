@@ -1,6 +1,6 @@
 # Photoactivatable_chemotaxis_simulator
 
-## Section I: Calculating theoretical photouncaging values 
+## theoretical_photokinetics(): Calculating theoretical photouncaging values 
 
 This section allows for calculating theoretical photouncaging values using the following first order kinetic equation for photouncaging: 
 
@@ -12,18 +12,15 @@ Plateau = 1
 
 **Input:** 
 
-
-
 *   Array of x values (Dosage)
 *   Photokinetic constant, k 
 
 **Output:** 
 
-
 *   Table of x and corresponding y values (normalized to 1)
 *   Graph of theoretical data
 
-## Section II: Calculating kinetic constant from laboratory data 
+## display(): Calculating kinetic constant from laboratory photokinetics data 
 
 This section allows for calculating the photouncaging constant k using the first order kinetic equation:
 
@@ -44,7 +41,7 @@ Plateau = 1
 *   Table of x and corresponding y values (normalized to 1)
 *   Graph of theoretical data
 
-## Section III: Modeling cell migration
+## cell_movement(): Modeling cell migration
 
 This section allows for modeling cell migration in 2D. It is based off of a stochastic compartment model developed by Fadai et al. 2019. 
 
